@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body onload="uuid()">
+    <nav>
+      <h3>Rick Brown</h3>
+      <h3>uuid Generator</h3>
+    </nav>
+    <main>
+      <div class="hero">
+        <h1>Online UUID Generator</h1>
+        <h2>
+          Generate a random<sup>*</sup> universally unique identification number
+        </h2>
+        <hr />
+        <div class="container">
+          <div id="uuid"></div>
+          <div
+            onclick="copyToClipboard(document.getElementById('uuid').innerHTML)"
+            class="btn"
+          >
+            <i class="far fa-clone"></i>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="item">
+          <h2>What is a universally unique identification number?</h2>
+          <hr />
+          <p>
+            A UUID (Universal Unique Identifier) is a 128-bit number used to
+            uniquely identify some object or entity on the Internet. Depending
+            on the specific mechanisms used, a UUID is either guaranteed to be
+            different or is, at least, extremely likely to be different from any
+            other UUID generated until 3400 A.D. <br />In its authoritative
+            textual representation, the 16 octets of a UUID are represented as
+            32 hexadecimal (base-16) digits, displayed in 5 groups separated by
+            hyphens, in the form 8-4-4-4-12 for a total of 36 characters (32
+            alphanumeric characters and 4 hyphens).<br />
+            <br />For example:
+            <span class="code">123e4567-e89b-12d3-a456-426655440000</span>
+          </p>
+        </div>
+        <div class="item">
+          <h2>So why are UUID's so important in React?</h2>
+          <hr />
+          <p>
+            React's power lies in its robust reconciliation process. When we use
+            JSX to create or update components, React creates its own virtual
+            DOM. It compares this virtual DOM to the actual DOM in the browser,
+            calculating the least number of changes necessary to update the
+            actual DOM to match the virtual DOM. <br />Sometimes we use multiple
+            instances of the same component in the same spot. Such as the
+            multiple instances of a 'TodoItem' component inside a 'TodoList'
+            component. When this occurs, unique keys are very important, because
+            they allow React to differentiate between these similar components,
+            and hone in on any that may need to be updated individually, instead
+            of re-rendering them all.
+          </p>
+        </div>
+        <!-- <div class="bottom item">
+          <h2>So why did I write this library and app?</h2>
+          <hr />
+          <p>
+            So lets consider the following excerpt from the React Documentation
+            on Reconciliation: <br/>
+            
+            <div>Consider the following excerpt from the React Documentation on
+              Reconciliation: Recursing On Children By default, when recursing
+              on the children of a DOM node, React just iterates over both lists
+              of children at the same time and generates a mutation whenever
+              there's a difference. For example, when adding an element at the
+              end of the children, converting between these two trees works
+              well:</div>
+          </p>
+          <code class="code-large">
+            <pre>
+function copyToClipboard(str) { 
+  function listener(e) { 
+    e.clipboardData.setData("text/html", str)
+    e.clipboardData.setData('text/plain', str) e.preventDefault() 
+  }
+  document.addEventListener('copy', listener)
+  document.execCommand('copy') document.removeEventListener('copy', listener)
+}
+            </pre>
+          </code>
+        </div> -->
+        <div class="bottom item">
+          <div id="TEST"></div>
+        </div>
+        <div class="item">
+          <h2>So what is this for?</h2>
+          <hr />
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt
+            maxime suscipit, itaque dolorum sit consequatur sint aliquam modi
+            inventore iusto, architecto libero beatae aut accusamus iste
+            corporis explicabo. Veritatis, dolore.
+          </p>
+        </div>
+        <div class="item">
+          <h2>How do I use this with React?</h2>
+          <hr />
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt
+            maxime suscipit, itaque dolorum sit consequatur sint aliquam modi
+            inventore iusto, architecto libero beatae aut accusamus iste
+            corporis explicabo. Veritatis, dolore. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Sed, repellendus facere quos quaerat
+            distinctio ipsa molestias. Unde ipsa, nisi dignissimos repellat
+            facilis magnam quo necessitatibus qui quaerat rem dicta corrupti!
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/TEST.md"></script>
+    <script src="./assets/javascript.js"></script>
+  </body>
+</html>
