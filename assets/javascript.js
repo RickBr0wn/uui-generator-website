@@ -1,7 +1,7 @@
 const marked = require('marked')
 
 function uuid() {
-  document.getElementById('uuid').innerHTML = uuidGen()
+  document.getElementById('uuid').innerHTML = UUID()
 }
 
 /**
