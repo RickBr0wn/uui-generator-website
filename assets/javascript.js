@@ -1,5 +1,3 @@
-const marked = require('marked')
-
 function uuid() {
   document.getElementById('uuid').innerHTML = UUID()
 }

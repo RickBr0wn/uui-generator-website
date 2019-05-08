@@ -8,7 +8,5 @@
   },
   "author": "Rick Brown <ricky.brown.00@gmail.com> (https://github.com/RickBr0wn/minimal-react-boilerplate)",
   "license": "MIT",
-  "dependencies": {
-    "marked": "^0.6.1"
-  }
+  "dependencies": {}
 }

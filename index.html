@@ -36,8 +36,8 @@
         </div>
       </div>
     </main>
-    <footer>
-      <div class="footer">
+    <section>
+      <div class="content">
         <div class="item">
           <h2>What is a universally unique identification number?</h2>
           <hr />
@@ -76,25 +76,73 @@
           <h2>So how can I use this in my React project?</h2>
           <hr />
           <p>
-            This is packaged as an NPM library, and can be seen at
-            https://npm.com/react-uuid.com. <br />
+            This is a packaged as an NPM library, and can be seen at
+            <a href="https://www.npmjs.com/package/react-uuid" target="_blank"
+              >https://www.npmjs.com/package/react-uuid</a
+            >. <br />To install simply type
+            <span class="code">npm i react-uuid</span> at the command line, at
+            the root of your project. It can be then easily used. For example:
+          </p>
+          <br />
+          <pre class="code">
+
+            import React from 'react'
+            import uuid from 'react-uuid'
+
+            const array = ['one', 'two', 'three']
+
+            export const LineItem = item => &lt;li key={uuid()}&gt;{item}&lt;/li&gt;
+
+            export const List = () => array.map(item => &lt;LineItem item={item} /&gt;)
+          </pre>
+          <br />
+          <p>
+            In the above example, the output would be 3
+            <span class="code">LineItem</span> components being rendered, with
+            each <span class="code">LineItem</span> supplied a universal unique
+            identifier, which when required, will allow React to identify which
+            <span class="code">LineItem</span> component should be mutated.
           </p>
         </div>
-        <!-- <div class="item">
-          <h2>How do I use this with React?</h2>
+        <div class="item wide">
+          <h2>
+            Before you go, Why is there an asterix next to the word random, in
+            the title?
+          </h2>
           <hr />
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt
-            maxime suscipit, itaque dolorum sit consequatur sint aliquam modi
-            inventore iusto, architecto libero beatae aut accusamus iste
-            corporis explicabo. Veritatis, dolore. Lorem, ipsum dolor sit amet
-            consectetur adipisicing elit. Sed, repellendus facere quos quaerat
-            distinctio ipsa molestias. Unde ipsa, nisi dignissimos repellat
-            facilis magnam quo necessitatibus qui quaerat rem dicta corrupti!
+            Well, <span class="code">react-uuid</span> uses the Javascript
+            <span class="code">Math.random()</span> function, which can be seen
+            here
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random"
+              target="_blank"
+              >https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random</a
+            >. But, surprise surprise,
+            <span class="code">Math.random()</span> doesn’t really generate a
+            random number. Not exactly. It just does a really good job of
+            simulating randomness. Algorithmic random number generation can’t
+            exactly be random, per se; which is why they’re more aptly called
+            pseudo-random number generators (PRNGs). If you’re using math and
+            formulae to create a sequence of numbers, random though they might
+            seem, those numbers will eventually repeat and reveal a non-random
+            pattern.
+            <a
+              href="https://en.m.wikipedia.org/wiki/Linear_congruential_generator"
+              target="_blank"
+              >https://en.m.wikipedia.org/wiki/Linear_congruential_generator</a
+            >. But for the usage in this package, pseudo-random is more than
+            sufficient.
           </p>
-        </div> -->
+          <br />
+          <p>
+            I genuinely hope you find this package useful, I've really enjoyed
+            building it. Any suggestions, comments or bugs, please open a pull
+            request, and I'll respond as soon as I can. Happy coding!
+          </p>
+        </div>
       </div>
-    </footer>
+    </section>
     <script src="./assets/TEST.md"></script>
     <script src="./assets/javascript.js"></script>
   </body>
